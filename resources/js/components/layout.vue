@@ -58,8 +58,10 @@
                             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->                           
                             <router-link class="text-gray-300 " :to="{ path: '/menu'}"> <div class="hover:bg-gray-700 text-gray-300 rounded-md px-3 py-2 text-sm font-medium"
                                 aria-current="page">Historias</div></router-link>
-                         <a href="/menu/config" class="hover:bg-gray-700 text-gray-300 rounded-md px-3 py-2 text-sm font-medium"
+                            <a href="/menu/config" class="hover:bg-gray-700 text-gray-300 rounded-md px-3 py-2 text-sm font-medium"
                                 aria-current="page">configuración</a>
+                            <router-link class="text-gray-300 " :to="{ path: '/empleados'}"> <div class="hover:bg-gray-700 text-gray-300 rounded-md px-3 py-2 text-sm font-medium"
+                                aria-current="page">Empleados</div></router-link>
                         </div>
                     </div>
                 </div>
@@ -163,8 +165,13 @@
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                 <router-link class="text-gray-300 " :to="{ path: '/menu'}"> <div class="hover:bg-gray-700 text-gray-300 rounded-md px-3 py-2 text-sm font-medium"
                                 aria-current="page">Historias</div></router-link>
-                         <a href="/menu/config" class="hover:bg-gray-700 text-gray-300 rounded-md px-3 py-2 text-sm font-medium"
-                                aria-current="page">configuración</a>
+                <a href="/menu/config" class="hover:bg-gray-700 text-gray-300 rounded-md px-3 py-2 text-sm font-medium"
+                aria-current="page">configuración</a>
+                <router-link class="text-gray-300 " :to="{ path: '/empleados'}">
+                <div class="hover:bg-gray-700 text-gray-300 rounded-md px-3 py-2 text-sm font-medium" aria-current="page">
+                    Empleados
+                </div>
+                 </router-link>
             </div>
         </div>
     </nav>

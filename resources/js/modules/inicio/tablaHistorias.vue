@@ -1,5 +1,8 @@
 <template>
-    <div class="row">
+ <button @click="oncreate=!oncreate" v-if="!oncreate" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 my-2 rounded ">
+            crear Historia
+        </button>  
+    <div class="row" v-if="!oncreate">
        
             <div class="table-responsive">
                 <dataTable :data="historias" :columns="columns" class="table table-sriped table-bordered display"
@@ -25,10 +28,9 @@
                         </tr>
                     </thead>
                 </dataTable>
-            </div>
-        
+            </div>        
     </div>
-    <crearHistoria v-if="user.profile === 'Profesional'">
+    <crearHistoria v-if="user.profile === 'Profesional' && oncreate" >
     </crearHistoria>
 
 </template>
@@ -46,8 +48,8 @@ import JSZip from 'jsZip';
 window.JSZip = JSZip;
 import { method } from 'lodash';
 import { http } from '../../services/http.service';
-import crearHistoria from '../crear_historia/crearHistoria.vue'
-import { onBeforeMount } from "vue";
+import crearHistoria from '../crear_historia/crearHistoria.vue';
+import { onBeforeMount, ref } from "vue";
 import { storeToRefs } from "pinia";
 import { useMenuStore } from "../menu/menu.store";
 import { useAuthStore } from "../auth/auth.store";
@@ -55,6 +57,8 @@ const { historias } = storeToRefs(useMenuStore());
 const { Action_get_historias } = useMenuStore();
 const { user } = storeToRefs(useAuthStore());
 const { Action_User } = useAuthStore();
+let oncreate =ref(false);
+
 const columns=[{data:null, render:function(data,type,row, meta)
             {return `${meta.row+1}`} },
             {data:'usuario'},

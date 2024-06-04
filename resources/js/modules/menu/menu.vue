@@ -10,5 +10,4 @@
 import layout from '../../components/layout.vue';
 import tablahistorias from '../inicio/tablaHistorias.vue';
 import configuracion from '../configuracion/configuracion.vue';
-
 </script>

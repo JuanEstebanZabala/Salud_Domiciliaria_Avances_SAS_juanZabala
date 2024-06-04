@@ -3,6 +3,7 @@
 use App\Http\Controllers;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\HistoriasController;
+use App\Http\Controllers\EmpleadosController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -36,5 +37,10 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::put('/historia/{id}', [HistoriasController::class,'update']);
     Route::patch('/historia/{id}', [HistoriasController::class,'updatePartial']);
     Route::delete('/historia/{id}', [HistoriasController::class,'destroy']);
+    Route::get('/empleados',[EmpleadosController::class,'index']);
+    Route::get('/empleados/{id}',[EmpleadosController::class,'show']);
+    Route::post('/empleados',[EmpleadosController::class,'store']);
+    Route::put('/empleados/{id}',[EmpleadosController::class,'update']);
+    Route::delete('/empleados/{id}', [EmpleadosController::class,'destroy']);
 });
 

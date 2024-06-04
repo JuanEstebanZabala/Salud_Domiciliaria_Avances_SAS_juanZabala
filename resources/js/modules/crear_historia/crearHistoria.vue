@@ -53,7 +53,7 @@
                         <div class="form-group mt-3">
                             <input type="submit" name="submit" class="btn btn-primary mr-2"
                                 style="background-color: #0e2146" value="crear">
-                            <a class="btn btn-danger" href="index.php" style="background-color: #8b0000">Regresar </a>
+                            <a class="btn btn-danger" href="/menu" style="background-color: #8b0000">Regresar</a>
                         </div>
                     </div>
                 </form>
@@ -94,6 +94,5 @@ onBeforeMount(async () => {
 async function confirm() {
     await Action_store_historia(model);
 }
-
 
 </script>

@@ -31,8 +31,14 @@ const router = createRouter({
                 {
                     path: '/menu/config',
                     name: 'config',
-                    meta: { title: 'Menu', requiresAuth: true },
+                    meta: { title: 'Configuracion', requiresAuth: true },
                     component: async () => await import('../modules/configuracion/configuracion.vue'),
+                },
+                {
+                    path: '/empleados',
+                    name: 'empleados',
+                    meta: { title: 'empleados', requiresAuth: true },
+                    component: async () => await import('../modules/empleados/empleados.vue'),
                 }
 
             ],

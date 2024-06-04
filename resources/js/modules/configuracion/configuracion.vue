@@ -1,6 +1,5 @@
 <template>
     <layout>       
-       
     </layout>
      <div class="rounded bg-gray-200 p-3 md:w-9/12 sm:w-full m-4 shadow-xl content-center mx-auto">
             <editar>
